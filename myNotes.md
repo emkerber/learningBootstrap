@@ -40,4 +40,8 @@ By default all of the columns have to add up to twelve because it's a twelve-col
 
 The middle two letters (xs, sm, md, lg) create media query break points. Whenever our screen gets to be a certain width (e.g. small devices are 768 pixels, so when the view port or browser is larger than 768 pixels) we can control the layout with our specified number of columns. Anything smaller than this will not be effected by the column specifications and will stack.
 
-If we're using the sm column structure and a regular container class, if the browser/view port becomes larger than 768, the width of the container will be set to a bit smaller than this (e.g. 750 pixels) and padding is added to each side of the container. 
+If we're using the sm column structure and a regular container class, if the browser/view port becomes larger than 768, the width of the container will be set to a bit smaller than this (e.g. 750 pixels) and padding is added to each side of the container.
+
+# Column layouts
+
+column layouts...
