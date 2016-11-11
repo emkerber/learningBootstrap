@@ -44,10 +44,12 @@ If we're using the sm column structure and a regular container class, if the bro
 
 # Column layouts
 
-It's a great idea to add comments after closing divs that explain what they're closing; classes or IDs can be used as descriptors.
-
   <article class="col-sm-4">
 
   The above code means each article will be in a grid where each of the elements will take four out of the 12 columns. Therefore, three should be in a row.
 
-  
+# Finishing the layout
+
+Containers should go around sections, not the entire page. For example, they could go around sections that are styled similarly with Bootstrap.  
+
+It's a great idea to add comments after closing divs that explain what they're closing; classes or IDs can be used as descriptors.
