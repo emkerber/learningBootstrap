@@ -163,3 +163,32 @@ When the size of the browser becomes smaller, at a certain point the navigation 
 You can control when this happens by creating a custom version of Bootstrap. Go to the Bootstrap website, then the "Customize and download" page, find the "Grid system" header, and change the "@grid-float-breakpoint-max" to the desired size.
 
 You can create a collapsable button, which will make the navigation collapse to a button when it becomes smaller. The code is complicated, so you can copy and paste from the Bootstrap site. The "data-target" class needs to point to an ID on the page, so you will have to create an element with that ID. After the closing <div> tag for the navbar-header and before the <ul> tag, create a <div> with a class of "collapse navbar-collapse" and an ID of "collapse". The <div> should wrap around the <ul>.
+
+# Building a footer layout
+
+This will build a two-column footer, with contact information on one side and a nav on the other. The nav content is alligned to the right. The footer's content is not aligned with the container applied to the rest of the page, but instead is aligned with the edges of the screen, because "container-fluid" is used. 
+
+  <footer>
+    <div class="content container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <p>Call us toll-free at <span class="phone">888-555-1212</span></p>
+          <p>All contents &copy; 2014 <a href="http://lynda.com">Lynda.com</a>. All rights reserved. </p>
+        </div> <!-- col-sm-6 -->  
+        <div class="col-sm-6">
+          <nav class="navbar navbar-default" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/">Terms of Use</a></li>
+              <li><a href="/">Privacy Policy</a></li>
+            </ul>
+          </nav>
+        </div> <!-- col-sm-6 -->  
+      </div> <!-- row -->  
+    </div> <!-- content container-fluid -->    
+  </footer>  
+
+In CSS, you can make the background of the footer transparent.
+
+footer .navbar-default {
+  background: transparent;
+}
