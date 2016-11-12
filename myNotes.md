@@ -31,6 +31,8 @@ The row class assumes we're going to be using some sort of columns, so any paddi
 
     The above code means that inside our row we want a column that takes up three spaces.
 
+    -----
+
     <div class="row">
       <div class="col-sm-9">
 
@@ -53,3 +55,76 @@ If we're using the sm column structure and a regular container class, if the bro
 Containers should go around sections, not the entire page. For example, they could go around sections that are styled similarly with Bootstrap.  
 
 It's a great idea to add comments after closing divs that explain what they're closing; classes or IDs can be used as descriptors.
+
+# Basic navigation
+
+  <header>
+    <nav>
+      <ul class="nav nav-tabs">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/other">Other</a></li>
+      </ul>
+    </nav>    
+  </header>  
+
+  This produces tabbed navigation, styled by Bootstrap.
+
+  -----
+
+  <li class="active"><a href="home">Home</a></li>
+
+  If on the Home page, you can indicate it on the Home nav tab.
+
+  -----
+
+  <li class="disabled"><a href="/other">Other</a></li>
+
+  This tab will be disabled, and cannot be clicked.
+
+Best practice is to use the class "nav navbar-nav" rather than "nav nav-tabs" or "nav nav-pills". Additionally, add classes to the <nav> tag of navbar and either navbar-default or navbar-inverse. This will look like:
+
+  <nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/home">Home</a></li>
+      <li><a href="/other">Other</a></li>
+    </ul>
+  </nav>    
+
+Navbar-default produces darkened text when hovered over (and "active" has a darkened background), and navbar-inverse produces inverse colors with a black (or darker-colored) background with text that lightens when hovered over (and "active" has a very, very slightly darker background by default).
+
+To help with accessibility, you should have a role tag within the <nav> tag.
+
+  <nav class="navbar navbar-default" role="navigation">
+
+The navbar should also be placed within a container, like so:
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/home">Home</a></li>
+        <li><a href="/other">Other</a></li>
+      </ul>
+    </div> <!-- container -->  
+  </nav>   
+
+If you want a logo/text to the left of the navigation, use a <div> with class of "navbar-header", and a class in the anchor tag of "navbar-brand". This will look like:
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/featured">Wisdom <span class="subhead">Pet Medicine</span></a>
+      </div> <!-- navbar-header -->
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/home">Home</a></li>
+        <li><a href="/other">Other</a></li>
+      </ul>
+    </div> <!-- container -->  
+  </nav>   
+
+Bootstrap, by default, adds a border radius, so you can change it in the .css file to:
+
+  .navbar {
+    border-radius: 0;
+  }
+
+# Controlling navigation positions
