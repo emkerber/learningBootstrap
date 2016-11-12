@@ -128,3 +128,38 @@ Bootstrap, by default, adds a border radius, so you can change it in the .css fi
   }
 
 # Controlling navigation positions
+
+If you want to align an element to the right of the navigation, add a navbar-right class on the UL.
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/featured">Wisdom <span class="subhead">Pet Medicine</span></a>
+      </div> <!-- navbar-header -->
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="/home">Home</a></li>
+        <li><a href="/other">Other</a></li>
+      </ul>
+    </div> <!-- container -->  
+  </nav>   
+
+You can align the navigation to either the top or the bottom of the page by finding the navbar-default class, and adding a class of navbar-fixed-top. Now, when you scroll, the navigation will stay put and content will be under it.
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/featured">Wisdom <span class="subhead">Pet Medicine</span></a>
+      </div> <!-- navbar-header -->
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="/home">Home</a></li>
+        <li><a href="/other">Other</a></li>
+      </ul>
+    </div> <!-- container -->  
+  </nav>   
+
+To align the navigation to the bottom of the page, use navbar-fixed-bottom instead. This will keep the navbar at the very bottom of the view, and content will move under it. Remember to leave a bit of space below your last content so it's not covered by the nav bar.
+
+When the size of the browser becomes smaller, at a certain point the navigation will switch to a single-column layout.
+You can control when this happens by creating a custom version of Bootstrap. Go to the Bootstrap website, then the "Customize and download" page, find the "Grid system" header, and change the "@grid-float-breakpoint-max" to the desired size.
+
+You can create a collapsable button, which will make the navigation collapse to a button when it becomes smaller. The code is complicated, so you can copy and paste from the Bootstrap site. The "data-target" class needs to point to an ID on the page, so you will have to create an element with that ID. After the closing <div> tag for the navbar-header and before the <ul> tag, create a <div> with a class of "collapse navbar-collapse" and an ID of "collapse". The <div> should wrap around the <ul>.
