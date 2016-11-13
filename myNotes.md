@@ -256,3 +256,14 @@ Examples:
 # Working with the branding and toggle styles
 
 Toggle: when you resize the navigation and eventually it collapses into a single button.
+
+# Overcoming injection issues
+
+In CSS, you can use a media query, which targets elements only when they are a certain size.
+
+  @media only screen
+  and (max-width: 768px) {
+    header .navbar-collapse.in {
+      background-color: rgba(0, 0, 0, .5);
+    }
+  }
