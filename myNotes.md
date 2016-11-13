@@ -166,7 +166,7 @@ You can create a collapsable button, which will make the navigation collapse to 
 
 # Building a footer layout
 
-This will build a two-column footer, with contact information on one side and a nav on the other. The nav content is alligned to the right. The footer's content is not aligned with the container applied to the rest of the page, but instead is aligned with the edges of the screen, because "container-fluid" is used. 
+This will build a two-column footer, with contact information on one side and a nav on the other. The nav content is alligned to the right. The footer's content is not aligned with the container applied to the rest of the page, but instead is aligned with the edges of the screen, because "container-fluid" is used.
 
   <footer>
     <div class="content container-fluid">
@@ -192,3 +192,38 @@ In CSS, you can make the background of the footer transparent.
 footer .navbar-default {
   background: transparent;
 }
+
+# Adding a basic carousel
+
+  <div class="carousel slide" data-ride="carousel" id="featured">
+    <div class="carousel-inner">
+      <div class="item active"><img src="images/lifestyle.jpg" alt="Lifestyle Photo"></div>
+      <div class="item"><img src="images/mission.jpg" alt="Mission Photo"></div>
+      <div class="item"><img src="images/vaccinations.jpg" alt="Vaccinations Photo"></div>
+      <div class="item"><img src="images/fish.jpg" alt="Fish Photo"></div>
+      <div class="item"><img src="images/exoticAnimals.jpg" alt="Exotic Animals Photo"></div>
+    </div> <!-- carousel-inner -->  
+
+    <a class="left carousel-control" href="/featured" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="/featured" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div> <!-- featured carousel -->
+
+The carousel, in the example, is within the header, below the navigation.  
+
+The <div> attribute data-ride="carousel" tells the JavaScript where to find and advance the carousel.
+
+Every carousel needs and ID so you can link the navigation of the carousel to the particular carousel that you're advancing.
+
+Each image goes within its own <div>, and traditionally the first item/carousel element has a class of "active", but you can actually place this anywhere to make any of the carousel elements active at the moment.
+
+Carousels traditionally have two parts:
+* the carousel itself
+* navigation
+
+You could modify the "carousel-inner" class to include a container class.
+
+You can allow the user to control carousel navigation. Create an anchor tag between the carousel-inner and the closing featured console <div>, and the href should target the carousel ID.
