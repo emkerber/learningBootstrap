@@ -252,3 +252,7 @@ Examples:
 - border: none;
 - link styling (text color, hover color, coloring/font-weight of active tab)
 - clear text-shadow, which Bootstrap sometimes adds by default
+
+# Working with the branding and toggle styles
+
+Toggle: when you resize the navigation and eventually it collapses into a single button.
