@@ -343,3 +343,52 @@ In the example, customer testimonials are styled. Pictures of the customers are 
 "TROUBLE" - top, right, bottom, left
 
 Almost always in the footer you'll want "container-fluid".
+
+# Tracking our navigation with ScrollSpy and jQuery
+
+The ScrollSpy plugin works both with and without JavaScript. It allows a navigation menu item to be highlighted when viewing that part of the page.
+
+CSS:
+- Usually you'll implement ScrollSpy in the <body> tag, using data-spy="scroll" and data-target="[the ID or class of the parent element of the Bootstrap .nav component]"
+- In the CSS, make sure body's position is relative.
+
+JavaScript/jQuery:
+- jQuery code would look like:
+
+    var topoffset = 50; // variable for menu height
+
+    // activate ScrollSpy
+    $('body').scrollspy({
+        target: 'header .navbar',
+        offset: topoffset
+      });
+
+- the offset fixes the problem of the item activating too soon when we have a smaller navbar at the top
+- there are methods that fire whenever something happens with ScrollSpy, one of which is 'activate.bs.scrollspy', which fires whenever a new item becomes activated by ScrollSpy
+
+  var hash = $(this).find('li.active a').attr('href');
+
+- the above code finds a list item that has an active class (which is assigned to an element when ScrollSpy sees it's being viewed) and look for the anchor tag, then find the href attribute, then put that information is this variable, hash; now the location of the current page is stored
+
+- add to the above code, and put it within a function, like so:
+
+  // Add an inbody class to nav when ScrollSpy event fires
+  $('.navbar-fixed-top').on('activate.bs.scrollspy', function() {
+    var hash = $(this).find('li.active a').attr('href');
+    if(hash !== '#featured') {
+      $('header nav').addClass('inbody');
+    } else {
+      $('header nav').removeClass('inbody');
+    }
+  });
+
+- this allows us to see when the user has scrolled past a certain section, and adds a class to this navigation tag
+
+- if you navigate directly to a part of the page (you refresh, or you click on a link) the ScrollSpy event will not have fired, because it occurs only when a change happens; insert the following code above the code just shown, so on page load the variable hash is defined and the inbody class is assigned:
+
+  var hash = $(this).find('li.active a').attr('href');
+  if(hash !== '#featured') {
+    $('header nav').addClass('inbody');
+  } else {
+    $('header nav').removeClass('inbody');
+  }
