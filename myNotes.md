@@ -227,3 +227,18 @@ Carousels traditionally have two parts:
 You could modify the "carousel-inner" class to include a container class.
 
 You can allow the user to control carousel navigation. Create an anchor tag between the carousel-inner and the closing featured console <div>, and the href should target the carousel ID.
+
+# Creating basic page styles
+
+Things you can do to personalize your Bootstrap style:
+
+* change the default fonts (Google Fonts cited as resource)
+  - font-family
+  - font-weight
+  - font-size
+
+* control the carousel with Javascript
+  - interval: amount of time to delay before automatically cycling an item; if false the carousel will not automatically  cycle
+  - pause: pauses the cycling of the carousel on mouseenter and resumes cycling on mouseleave
+  - wrap: whether the carousel should cycle continuously or have hard stops
+  - keyboard: whether the carousel should react to keyboard events
