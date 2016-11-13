@@ -4,6 +4,10 @@ In HTML, source Bootstrap CSS then your own CSS, and then the viewport meta tag.
 Also in HTML, source jQuery (use link on Bootstrap site), then Bootstrap JS, and then our own JS.
 Example uses the Bootstrap CDN from their site, rather than hosting it locally.
 
+The viewport meta tag looks like this:
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 # Container class
 
 Containers wrap the content that you want to control with the Bootstrap grid system.
@@ -265,5 +269,23 @@ In CSS, you can use a media query, which targets elements only when they are a c
   and (max-width: 768px) {
     header .navbar-collapse.in {
       background-color: rgba(0, 0, 0, .5);
+    }
+  }
+
+# Styling single-page designs
+
+Examples:
+- background-color
+- background-image (used to implement a linear-gradient)
+  * sometimes older browsers require you to specify some prefixes
+  * the website "CSS3, Please" can help indicate how code should look, such as including webkit stuff
+  * there's a library called "-prefix-free" that allows you to write in CSS3, and automatically injects older versions of CSS; to use, download and call it within a script tag (it's a min.js file) injected right under the stylesheets
+- when the browser is a certain size, make paragraphs with the class "service" look a little differently:
+
+  @media only screen
+  and (min-width: 450px)
+  and (max-width: 768px) {
+    .service p {
+      padding: 0 20%;
     }
   }
