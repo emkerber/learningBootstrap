@@ -305,3 +305,9 @@ You can specify elements' behavior at different viewport sizes like so:
 "col-sm-6" means that a small size, the element will take up six columns.
 
 "col-xs-12" means that at an extra-small size, the element will take up all 12 columns.
+
+# Tackling a multilevel layout
+
+You can put inner rows within outer rows, creating new sets of 12 columns within the existing outer row's set of 12 columns.
+
+Making the container fluid will allow it to go the full width of the browser, and will likely help your columns-within-columns look good.
