@@ -336,4 +336,10 @@ Here's an example of columns within columns with all viewport sizes specified:
 
 # Using background images and rollovers
 
-In the example, customer testimonials are styled. Pictures of the customers are shown, and when you hover over them text appears, with a background of 60% transparent so the image still shows. 
+In the example, customer testimonials are styled. Pictures of the customers are shown, and when you hover over them text appears, with a background of 60% transparent so the image still shows.
+
+# Fixing our footer
+
+"TROUBLE" - top, right, bottom, left
+
+Almost always in the footer you'll want "container-fluid".
