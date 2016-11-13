@@ -289,3 +289,19 @@ Examples:
       padding: 0 20%;
     }
   }
+
+# Using multiple Bootstrap grids
+
+"col-md-5" means that at a medium size, the elements will take five columns.
+
+If your content is not taking up the full 12 columns and therefore is off-center, you can add "col-md-offset-1", which will look like:
+
+  <p class="col-md-5 col-md-offset-1">
+
+You can specify elements' behavior at different viewport sizes like so:
+
+  <article class="service col-md-4 col-sm-6 col-xs-12">
+
+"col-sm-6" means that a small size, the element will take up six columns.
+
+"col-xs-12" means that at an extra-small size, the element will take up all 12 columns.
