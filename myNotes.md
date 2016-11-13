@@ -311,3 +311,25 @@ You can specify elements' behavior at different viewport sizes like so:
 You can put inner rows within outer rows, creating new sets of 12 columns within the existing outer row's set of 12 columns.
 
 Making the container fluid will allow it to go the full width of the browser, and will likely help your columns-within-columns look good.
+
+# Dealing with multiple responsive columns
+
+If using an offset for one size, you should also use it for other specified sizes but assign 0 if offset is unwanted. Example:
+
+  <div class="photo col-md-2 col-md-offset-2 col-lg-4 col-lg-offset-0"
+
+Here's an example of columns within columns with all viewport sizes specified:
+
+  <h2>Staff</h2>
+  <div class="row">
+    <div class="doctor col-lg-4">
+      <div class="row">
+        <div class="photo col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2 col-lg-4 col-lg-offset-0"
+          <img class="img-circle" src="images/doctor1.jpg" alt="Photo of doctor 1">
+        </div> <!-- photo -->  
+        <div class="info col-xs-8 col-xs-offset-2 col-sm-7 col-sm-offset-0 col-md-6 col-lg-8">
+          <h3>Doctor 1</h3>
+          <p>Doctor 1 text</p>
+        </div> <!-- info -->  
+      </div> <!-- inner row -->
+    </div> <!-- doctor -->    
