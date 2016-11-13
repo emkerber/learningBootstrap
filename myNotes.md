@@ -242,3 +242,13 @@ Things you can do to personalize your Bootstrap style:
   - pause: pauses the cycling of the carousel on mouseenter and resumes cycling on mouseleave
   - wrap: whether the carousel should cycle continuously or have hard stops
   - keyboard: whether the carousel should react to keyboard events
+
+# Modifying Bootstrap navigation styles
+
+It's useful to "Inspect Element" in Chrome to see which classes/IDs are controlling colors/padding/etc.  
+
+Examples:
+- background-color: transparent;
+- border: none;
+- link styling (text color, hover color, coloring/font-weight of active tab)
+- clear text-shadow, which Bootstrap sometimes adds by default
