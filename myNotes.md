@@ -333,3 +333,7 @@ Here's an example of columns within columns with all viewport sizes specified:
         </div> <!-- info -->  
       </div> <!-- inner row -->
     </div> <!-- doctor -->    
+
+# Using background images and rollovers
+
+In the example, customer testimonials are styled. Pictures of the customers are shown, and when you hover over them text appears, with a background of 60% transparent so the image still shows. 
