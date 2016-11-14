@@ -427,3 +427,26 @@ You can use a fading animation rather than a sliding animation. The current imag
 # Making carousel elements display full screen
 
 Changing the images in the carousel to background images allows them to take up the full width and height of the browser window while centering, and without stretching the image. This change can be done with some JavaScript code.
+
+# Randomizing our carousels
+
+This is done in the JavaScript, using Math.random():
+
+  var slideqty = $('#featured .item').length;
+  var randSlide = Math.floor(Math.random() * slideqty);
+
+Set the opacity of the :first-child to 0, so a random image is shown upon page load.
+
+In the function in which the carousel indicators are automatically generated (which is a for loop that goes through all of the images and appends a li item to the ol that creates the indicators), add an if statement that says if the index of the current element is the same as the randSlide number, insert a class of "active"
+
+  // Automatically generate carousel indicators
+  for (var i = 0; i < slideqty; i++) {
+    var insertText = '<li data-target="featured" data-slide-to="' + i + '"';
+    if (i === randSlide) {
+      insertText += ' class="active" ';
+    }
+    insertText += '></li>';
+    $('#featured ol').append(insertText);
+  }
+
+It may be obnoxious to have the carousel moving/changing images while you're working on it, so during production you can set interval to false (interval: false) in the JavaScript.
