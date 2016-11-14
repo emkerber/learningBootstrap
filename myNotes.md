@@ -392,3 +392,13 @@ JavaScript/jQuery:
   } else {
     $('header nav').removeClass('inbody');
   }
+
+# Styling our ScrollSpy navigation
+
+The .inbody class is added to the nav when you leave the first section. If, for example, you add a background to the "header .inbody" and scroll down past a certain area at the top, the background will appear.
+
+To make the transition smoother into the .inbody class:
+
+  header .navbar {
+    transition: all .5s ease-out;
+  }
