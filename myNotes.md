@@ -409,3 +409,11 @@ To make the transition smoother into the .inbody class, in the CSS file:
 http://css-tricks.com/snippets/jquery/smooth-scrolling
 
 The author altered the code at the above link to target the correct navigation, to use === instead of ==, and the offset is taken into account.
+
+# Automating carousel indicators
+
+In the JavaScript file, you can have the script count how many items are in the carousel and then automatically insert all of the list items in the ordered list. The HTML is simply:
+
+  <ol class="carousel-indicators"></ol>
+
+For loops are involved. To see full code, watch lesson again.
