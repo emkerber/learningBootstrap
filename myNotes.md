@@ -423,3 +423,7 @@ For loops are involved. To see full code, watch lesson again.
 # Creating a carousel that fades
 
 You can use a fading animation rather than a sliding animation. The current image is opaque, and all others are completely transparent.
+
+# Making carousel elements display full screen
+
+Changing the images in the carousel to background images allows them to take up the full width and height of the browser window while centering, and without stretching the image. This change can be done with some JavaScript code.
