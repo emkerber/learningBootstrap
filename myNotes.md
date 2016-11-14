@@ -412,8 +412,14 @@ The author altered the code at the above link to target the correct navigation, 
 
 # Automating carousel indicators
 
+Bootstrap requires much more hard coding than automation with JavaScript.
+
 In the JavaScript file, you can have the script count how many items are in the carousel and then automatically insert all of the list items in the ordered list. The HTML is simply:
 
   <ol class="carousel-indicators"></ol>
 
 For loops are involved. To see full code, watch lesson again.
+
+# Creating a carousel that fades
+
+You can use a fading animation rather than a sliding animation. The current image is opaque, and all others are completely transparent.
