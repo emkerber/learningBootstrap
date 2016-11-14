@@ -386,6 +386,7 @@ JavaScript/jQuery:
 
 - if you navigate directly to a part of the page (you refresh, or you click on a link) the ScrollSpy event will not have fired, because it occurs only when a change happens; insert the following code above the code just shown, so on page load the variable hash is defined and the inbody class is assigned:
 
+  // add inbody class
   var hash = $(this).find('li.active a').attr('href');
   if(hash !== '#featured') {
     $('header nav').addClass('inbody');
@@ -397,8 +398,14 @@ JavaScript/jQuery:
 
 The .inbody class is added to the nav when you leave the first section. If, for example, you add a background to the "header .inbody" and scroll down past a certain area at the top, the background will appear.
 
-To make the transition smoother into the .inbody class:
+To make the transition smoother into the .inbody class, in the CSS file:
 
   header .navbar {
     transition: all .5s ease-out;
   }
+
+# Smoothing our page scroll
+
+http://css-tricks.com/snippets/jquery/smooth-scrolling
+
+The author altered the code at the above link to target the correct navigation, to use === instead of ==, and the offset is taken into account.
