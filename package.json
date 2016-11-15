@@ -1,0 +1,22 @@
+{
+  "name": "learning_bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emkerber/learningBootstrap.git"
+  },
+  "author": "Liz Kerber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emkerber/learningBootstrap/issues"
+  },
+  "homepage": "https://github.com/emkerber/learningBootstrap#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
