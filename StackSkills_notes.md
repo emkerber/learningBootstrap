@@ -49,3 +49,7 @@ If you're not using a personal server, the files can really go anywhere on your 
 # Linking files
 
 The example code shows how the author linked his files within the HTML doc.
+
+# Creating NavBar
+
+The author demonstrated how to create a navbar with an icon button and an image.
