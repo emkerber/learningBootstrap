@@ -45,3 +45,7 @@ Move downloaded Bootstrap folders (those inside bootstrap-4.0.0-alpha.2) into th
 - The css file and the js file, both inside bootstrap-4.0.0-alpha.2 > dist, are the only files you really need to move, but there are also Sass files and such
 
 If you're not using a personal server, the files can really go anywhere on your system. The files must be in the same folder, but that folder is automatically found by the editor (after right-clicking on it and selecting "Open with Atom" LOL).
+
+# Linking files
+
+The example code shows how the author linked his files within the HTML doc.
