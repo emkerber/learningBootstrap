@@ -57,3 +57,9 @@ The author demonstrated how to create a navbar with an icon button and an image.
 # Creating Jumbotron
 
 New in Bootstrap 4: "rem" (for sizing) is route em, and calculates size based on HTML
+
+# Creating cards
+
+A card is a flexible and extensible content container.
+
+Cards replace thumbnails, wells, and panels from Bootstrap 3.
