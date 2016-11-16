@@ -63,3 +63,7 @@ New in Bootstrap 4: "rem" (for sizing) is route em, and calculates size based on
 A card is a flexible and extensible content container.
 
 Cards replace thumbnails, wells, and panels from Bootstrap 3.
+
+# Adding footers
+
+Pretty straight-forward.
